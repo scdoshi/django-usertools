@@ -1,0 +1,19 @@
+{% autoescape off %}
+Dear user,
+
+Thank you for joining {{ site.name }}.
+
+To activate your account, click on the link below:
+http{% if https %}s{% endif %}://{{ site.domain }}{% url usertools-email-verify verification_key %}
+
+We hope you enjoy {{ site.name }}.
+
+Thanks,
+Team {{ site.name }}
+
+You are recieving this message because someone signed up for {{ site.name }} at 
+{{ site.domain }} using the email address {{ user.email }}. If you did not join
+{{ site.name }}, then please ignore this message.
+
+{% endautoescape %}
+

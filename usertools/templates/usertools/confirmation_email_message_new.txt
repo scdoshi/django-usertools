@@ -1,0 +1,12 @@
+{% autoescape off %}
+Dear user,
+
+You requested a change of your email address at {{ site.name }}.
+
+Please confirm this email address by clicking on the link below:
+
+http{% if https %}s{% endif %}://{{ site.domain }}{% url usertools-email-confirm user.username confirmation_key %}
+
+Sincerely,
+Team {{ site.name }}
+{% endautoescape %}

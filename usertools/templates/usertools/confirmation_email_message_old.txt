@@ -1,0 +1,10 @@
+{% autoescape off %}
+Dear user,
+
+There was a request to change your email address at {{ site.name }}.
+
+An email has been send to {{ new_email }} which contains a verification link. Click on the link in the email to activate it.
+
+Sincerely,
+Team {{ site.name }}
+{% endautoescape %}
